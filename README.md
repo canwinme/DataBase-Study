@@ -18,9 +18,15 @@ DataBase-Study/
    │  ├─ 02_query_practice.sql
    │  └─ 03_ddl_dml_practice.sql
    │
-   └─ jobradar/
-      ├─ 01_schema.sql
-      └─ 02_career_job.sql
+   ├─ jobradar/
+   │  ├─ 01_schema.sql
+   │  └─ 02_career_job.sql
+   │
+   └─ boston-house/
+      ├─ BOSTANHOUSE.java
+      ├─ boston_house_price.csv
+      ├─ schema.sql
+      └─ README.md
 ```
 
 ## Oracle SQL Practice
@@ -57,6 +63,18 @@ BOOK, CUSTOMER, ORDERS 테이블을 기준으로 다양한 조회문을 연습�
 - DELETE
 - COMMIT
 - Boston Housing 데이터용 테이블 생성
+
+## Boston House Price JDBC Practice
+
+Kaggle의 Boston House Price CSV를 Java로 읽어 Oracle DB에 Batch INSERT하고,
+DB에서 다시 조회하여 컬럼별 값을 10개 구간으로 나누어 콘솔 분포를 출력하는 실습입니다.
+
+- Java 파일 입출력 / CSV 처리
+- Oracle JDBC
+- PreparedStatement Batch
+- ResultSet 조회
+- 컬럼별 최소·최대값 및 구간 분포 계산
+- DB 계정/비밀번호는 환경변수로 분리
 
 ## JobRadar Database
 
@@ -95,5 +113,6 @@ CareerNet 직업 데이터를 저장하기 위한 `TB_CAREER_JOB` 테이블을 �
 
 - `practice`: Oracle SQL 학습 및 문법 실습
 - `jobradar`: 프로젝트에서 실제 사용한 데이터베이스 스키마
+- `boston-house`: CSV → Oracle JDBC 적재 및 조회/분포 출력 실습
 
 > 일부 기존 SQL 파일에는 저장 당시 인코딩 문제로 한글 주석 및 데이터가 깨진 부분이 남아 있습니다. 원본 보존을 위해 임의로 수정하지 않았습니다.
